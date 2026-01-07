@@ -1441,7 +1441,7 @@ def admin_users():
     return render_template('admin/users.html', users=users)
 
 
-# Add this near the other admin routes (around line 1400-1500)
+
 
 @app.route('/admin/users/add', methods=['POST'])
 @login_required
@@ -1899,5 +1899,6 @@ if __name__ == '__main__':
     app.logger.info('✓ Analysis caching enabled')
     app.logger.info('✓ Background database saving enabled')
     app.logger.info('Server ready for immediate response analysis!')
+
 
     app.run(debug=True, host='0.0.0.0', port=5000)
